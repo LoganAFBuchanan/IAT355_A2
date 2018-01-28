@@ -28,7 +28,7 @@
 
      data.forEach(function (d){
 
-         if (d.Model.includes("Ale")){
+         if (d.name.includes("Ale")){
              countAle++;
          }
 
