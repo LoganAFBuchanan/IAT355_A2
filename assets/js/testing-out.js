@@ -35,7 +35,7 @@
      })
 
 
-     console.log(" The number of Ale Beers is "+countCannon);
+     console.log(" The number of Ale Beers is "+countAle);
 
 
 
