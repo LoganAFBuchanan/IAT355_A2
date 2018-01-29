@@ -1,7 +1,7 @@
 //Adapted from procesData.js from lecture 4
 
    // use local file
-   var url ="./assets/data/beers.csv";
+   var url ="http://www.sfu.ca/~labuchan/IAT_355/data/beers.csv";
 
  d3.csv(url,function (data){
 
