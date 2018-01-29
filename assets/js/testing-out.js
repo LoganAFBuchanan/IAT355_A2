@@ -60,12 +60,14 @@
 
    });
 
-   var findMaxButton = document.getElementById("FindMax");
+   //Updated text fields for diplaying selected dimensions and outputs of queries
    var selectedText = document.getElementById("SelectedText");
    var output = document.getElementById("Output");
 
+   //Selected Dimension for use with d3 queries
    var dimension = "";
 
+   
    function UpdateSelected(update, name){
      selectedText.innerHTML = update;
      dimension = name;
@@ -75,6 +77,7 @@
      output.innerHTML = info;
    }
 
+   //Button listeners for each of the selectable dimensions
    document.getElementById("Selector-ID").addEventListener("click", function(){
     UpdateSelected("ID", "id");
    });
@@ -97,6 +100,8 @@
     UpdateSelected("Ounces", "ounces");
    });
 
+
+
    function FindMax(){
      console.log("It's Working (Max)");
 
@@ -104,6 +109,7 @@
 
        //https://stackoverflow.com/questions/30874617/d3-max-didnt-get-the-correct-value
        data.forEach(function(d) {
+         //Need to parse float so that the max function doesn't order based on string value
             d[dimension] = parseFloat(d[dimension]);
         });
        var m=d3.max(data,function (d){
@@ -122,6 +128,7 @@
 
        //https://stackoverflow.com/questions/30874617/d3-max-didnt-get-the-correct-value
        data.forEach(function(d) {
+         //Need to parse float so that the max function doesn't order based on string value
             d[dimension] = parseFloat(d[dimension]);
         });
        var m=d3.min(data,function (d){
@@ -140,6 +147,7 @@
 
        //https://stackoverflow.com/questions/30874617/d3-max-didnt-get-the-correct-value
        data.forEach(function(d) {
+         //Need to parse float so that the max function doesn't order based on string value
             d[dimension] = parseFloat(d[dimension]);
         });
        var m=d3.mean(data,function (d){
