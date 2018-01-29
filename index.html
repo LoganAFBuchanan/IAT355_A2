@@ -4,10 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
 
   <title>Assignment 2 Test </title>
 </head>
 <body>
+
+  <h1 id="SelectedText">No Dimension Selected</h1>
+
+  <div class="row">
+    <button id="Selector-ID">ID</button>
+    <button id="Selector-ABV">ABV</button>
+    <button id="Selector-IBU">IBU</button>
+    <button id="Selector-Name">Name</button>
+    <button id="Selector-Style">Style</button>
+    <button id="Selector-Brewery">Brewery ID</button>
+    <button id="Selector-Ounces">Ounces</button>
+  </div>
+  <div class="row">
+    <button id="FindMax" onclick="FindMax()">Find Max</button>
+    <button id="FindMin" onclick="FindMin()">Find Min</button>
+    <button id="FindMean" onclick="FindMean()">Find Mean</button>
+  </div>
+
+  <h2 id="Output">No Output Yet</h2>
 
 </body>
    <script src="assets/js/testing-out.js"></script>
