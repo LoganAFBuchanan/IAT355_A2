@@ -51,7 +51,10 @@ function search() {
   d3.csv(url, function (data) {
 
       console.log(data[dimension]);
-      var results = data[dimension].filter(word => word == query);
+      // var results = data[dimension].filter(word => word == query);
+      var results = data.filter(function(d) {
+        return (d[dimension].indexOf(query) === 0);
+      });
       UpdateOutput(results.length);
   });
 }
