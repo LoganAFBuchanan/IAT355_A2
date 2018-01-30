@@ -4,36 +4,36 @@
    //var url ="http://www.sfu.ca/~labuchan/IAT_355/data/beers.csv";
    var url ="./assets/data/beers.csv";
 
- // d3.csv(url,function (data){
+ d3.csv(url,function (data){
 
- //       console.log(" # Beers in dataset:  "+data.length)
- //     // filter data to get only  price less than 500
+     //   console.log(" # Beers in dataset:  "+data.length)
+     // // filter data to get only  price less than 500
 
- //     var americanIPA= data.filter(function (d){
+     // var americanIPA= data.filter(function (d){
 
- //         return (d.style == "American IPA")
- //     });
+     //     return (d.style == "American IPA")
+     // });
 
- //        console.log(" # American IPAs:  " + americanIPA.length)
- //        console.log(americanIPA[0]);
+        // console.log(" # American IPAs:  " + americanIPA.length)
+        // console.log(americanIPA[0]);
 
- //     var highABV= data.filter(function (d){
+     // var highABV= data.filter(function (d){
 
- //         return (d.abv>=0.05)
- //     });
+     //     return (d.abv>=0.05)
+     // });
 
- //     console.log(" # high ABV Beers:  " +highABV.length)
- //     console.log(highABV[0]);
+     // console.log(" # high ABV Beers:  " +highABV.length)
+     // console.log(highABV[0]);
 
- //     var countAle=0;
+     // var countAle=0;
 
- //     data.forEach(function (d){
+     // data.forEach(function (d){
 
- //         if (d.name.includes("Ale")){
- //             countAle++;
- //         }
+     //     if (d.name.includes("Ale")){
+     //         countAle++;
+     //     }
 
- //     })
+     // })
 
 
      console.log(" The number of Ale Beers is "+countAle);
