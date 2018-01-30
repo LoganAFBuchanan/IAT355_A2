@@ -51,17 +51,17 @@ function getSum() {
 
   d3.csv(url, function (data) {
     console.log(dimension);
-    if (dimension != "abv"
-      || dimension != "ibu"
-      || dimension != "ounces") {
-      sum = "Data not quantitative -- sum not applicable";
-    } else {
-      data.forEach(function(d) {
-        d[dimension] = parseFloat(d[dimension]);
-      });
+    if (dimension == "abv"
+      || dimension == "ibu"
+      || dimension == "ounces") {
+        data.forEach(function(d) {
+          d[dimension] = parseFloat(d[dimension]);
+        });
       sum = d3.sum(data, function(d) {
         return d[dimension];
       });
+    } else {
+      sum = "Data not quantitative -- sum not applicable";
     }
     updateSum(sum);
   });
