@@ -48,8 +48,9 @@ UpdateSelected("Ounces", "ounces");
 
 function getSum() {
   var sum;
-  console.log(dimension);
+
   d3.csv(url, function (data) {
+    console.log(dimension);
     if (dimension != "abv"
       || dimension != "ibu"
       || dimension != "ounces") {
