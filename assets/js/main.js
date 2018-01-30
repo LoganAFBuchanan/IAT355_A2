@@ -150,6 +150,9 @@ function updateButtons(){
   });
     if(dimension == "name" ||
        dimension == "style"){
+         Array.from(document.getElementsByClassName("filter")).forEach(function(button){
+           button.classList.remove("disabled");
+         });
 
 
          document.getElementById("FindMax").classList.add("disabled");
