@@ -26,6 +26,6 @@ button.disabled{
   cursor:not-allowed;
 }
 
-button.hover {
+button:hover {
   background-color: gray;
 }
