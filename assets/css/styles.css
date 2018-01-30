@@ -1,4 +1,27 @@
+body{
+  font-family: 'Roboto Mono', monospace;
+  margin:1rem;
+}
+
 .row{
   display:block;
   margin-top:1rem;
+}
+
+button{
+  background-color: #34403A;
+  padding:1rem 2rem;
+  border:0;
+  color:white;
+  cursor:pointer;
+}
+
+button.selected{
+  background-color:#46514B;
+}
+
+button.disabled{
+  background-color:#DADCDB;
+  pointer-events: none;
+  cursor:not-allowed;
 }
