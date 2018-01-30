@@ -145,12 +145,12 @@ function FindMean(){
 }
 
 function updateButtons(){
-
+  Array.from(document.getElementsByClassName("filter")).forEach(function(button){
+    button.classList.remove("disabled");
+  });
     if(dimension == "name" ||
        dimension == "style"){
-         document.getElementsByClassName("filter").forEach(function(button){
-           button.classList.remove("disabled");
-         });
+
 
          document.getElementById("FindMax").classList.add("disabled");
          document.getElementById("FindMin").classList.add("disabled");
