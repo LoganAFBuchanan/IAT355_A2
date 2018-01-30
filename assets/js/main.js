@@ -2,9 +2,7 @@
 
 var url ="./assets/data/beers.csv";
 
-d3.csv(url,function (data){
-  console.log(" The number of Ale Beers is "+countAle);
-});
+
 
 //Updated text fields for diplaying selected dimensions and outputs of queries
 var selectedText = document.getElementById("SelectedText");
