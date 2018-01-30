@@ -148,7 +148,7 @@ function updateButtons(){
 
     if(dimension == "name" ||
        dimension == "style"){
-         document.getElementsByClassName("filter").forEach(function(button){
+         Array.from(document.getElementsByClassName("filter")).forEach(function(button){
            button.classList.remove("disabled");
          });
 
