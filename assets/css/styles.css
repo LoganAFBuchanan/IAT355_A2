@@ -25,3 +25,7 @@ button.disabled{
   pointer-events: none;
   cursor:not-allowed;
 }
+
+button.hover {
+  background-color: gray;
+}
