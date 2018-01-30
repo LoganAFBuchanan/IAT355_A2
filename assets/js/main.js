@@ -46,6 +46,7 @@ document.getElementById("Selector-Ounces").addEventListener("click", function(){
 UpdateSelected("Ounces", "ounces");
 });
 
+// https://stackoverflow.com/questions/33154485/searching-in-javascript-d3
 function search() {
   var query = document.getElementById("searchField").value;
   d3.csv(url, function (data) {
