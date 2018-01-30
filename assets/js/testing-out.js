@@ -14,7 +14,7 @@
          return (d.style == "American IPA")
      });
 
-        console.log(" # American IPAs:  " +americanIPA.length)
+        console.log(" # American IPAs:  " + americanIPA.length)
         console.log(americanIPA[0]);
 
      var highABV= data.filter(function (d){
@@ -67,7 +67,7 @@
    //Selected Dimension for use with d3 queries
    var dimension = "";
 
-   
+
    function UpdateSelected(update, name){
      selectedText.innerHTML = update;
      dimension = name;
