@@ -16,6 +16,8 @@ var dimension = "";
 function UpdateSelected(update, name){
  selectedText.innerHTML = update;
  dimension = name;
+
+ updateButtons();
  getSum();
 }
 
@@ -140,4 +142,20 @@ function FindMean(){
     console.log(m);
     UpdateOutput(m);
  });
+}
+
+function updateButtons(){
+
+    if(dimension == "name" ||
+       dimension == "style"){
+         document.getElementsByClass("filter").foreach(function(button){
+           button.classList.remove("disabled");
+         });
+
+         document.getElementById("FindMax").classList.add("disabled");
+         document.getElementById("FindMin").classList.add("disabled");
+         document.getElementById("FindMean").classList.add("disabled");
+
+       }
+
 }
