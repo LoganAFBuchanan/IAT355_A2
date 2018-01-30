@@ -49,6 +49,8 @@ UpdateSelected("Ounces", "ounces");
 function search() {
   var query = document.getElementById("searchField").value;
   d3.csv(url, function (data) {
+
+      console.log(data[dimension]);
       var results = data[dimension].filter(word => word == query);
       UpdateOutput(results.length);
   });
