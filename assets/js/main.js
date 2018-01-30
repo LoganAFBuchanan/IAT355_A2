@@ -46,6 +46,14 @@ document.getElementById("Selector-Ounces").addEventListener("click", function(){
 UpdateSelected("Ounces", "ounces");
 });
 
+function search() {
+  var query = document.getElementById("searchField").value;
+  d3.csv(url, function (data) {
+      var results = data[dimension].filter(word => word == query);
+      UpdateOutput(results.length);
+  });
+}
+
 function getSum() {
   var sum;
 
