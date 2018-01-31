@@ -12,6 +12,12 @@ var sum = document.getElementById("sum");
 //Selected Dimension for use with d3 queries
 var dimension = "";
 
+//Initially disables all filter button when no dimension is selected
+if(dimension == ""){
+  Array.from(document.getElementsByClassName("filter")).forEach(function(button){
+    button.classList.add("disabled");
+  });
+}
 
 function UpdateSelected(update, name){
  selectedText.innerHTML = update;
@@ -126,34 +132,31 @@ function FindMin(){
 }
 
 function FindMean(){
- console.log("It's Working (Mean)");
 
- d3.csv(url,function (data){
+  console.log("It's Working (Mean)");
+  d3.csv(url,function (data){
 
-   //https://stackoverflow.com/questions/30874617/d3-max-didnt-get-the-correct-value
-   data.forEach(function(d) {
-     //Need to parse float so that the max function doesn't order based on string value
-        d[dimension] = parseFloat(d[dimension]);
-    });
-   var m=d3.mean(data,function (d){
-      return d[dimension];
-    });
+  //https://stackoverflow.com/questions/30874617/d3-max-didnt-get-the-correct-value
+  data.forEach(function(d) {
+    //Need to parse float so that the max function doesn't order based on string value
+      d[dimension] = parseFloat(d[dimension]);
+  });
+  var m=d3.mean(data,function (d){
+    return d[dimension];
+  });
 
-    console.log(m);
-    UpdateOutput(m);
+  console.log(m);
+  UpdateOutput(m);
  });
 }
 
+//Disables buttons that aren't usable when certain dimensions are selected
 function updateButtons(){
   Array.from(document.getElementsByClassName("filter")).forEach(function(button){
     button.classList.remove("disabled");
   });
     if(dimension == "name" ||
        dimension == "style"){
-         Array.from(document.getElementsByClassName("filter")).forEach(function(button){
-           button.classList.remove("disabled");
-         });
-
 
          document.getElementById("FindMax").classList.add("disabled");
          document.getElementById("FindMin").classList.add("disabled");
