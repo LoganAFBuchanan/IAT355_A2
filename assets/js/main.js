@@ -1,8 +1,4 @@
-//Adapted from procesData.js from lecture 4
-
 var url ="./assets/data/beers.csv";
-
-
 
 //Updated text fields for diplaying selected dimensions and outputs of queries
 var selectedText = document.getElementById("SelectedText");
@@ -85,6 +81,7 @@ function getSum() {
     } else {
       sum = "Data not quantitative -- sum not applicable";
     }
+
     updateSum(sum);
   });
 }
